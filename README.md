@@ -45,3 +45,60 @@ It is possible to insert data with or without fieldnames.
 INSERT INTO people VALUES (3, 'Dave')
 INSERT INTO people (id, name) VALUES (3, 'Dave')
 ```
+
+## SELECT DATA
+https://youtu.be/-FPVPcq28r4?list=PL-osiE80TeTsKOdPrKeSOp4rN3mza8VHN&t=68
+
+
+### Get all data
+```sql
+SELECT * from poeple
+```
+
+### Get specific columns
+```sql
+SELECT first_name, age from poeple
+```
+
+### Multiple condition where statement
+```sql
+SELECT * FROM PEOPLEs
+WHERE last_name = 'Backstrom'
+AND age < 37
+```
+
+### ORDER BY
+
+```sql
+SELECT * FROM PEOPLE
+WHERE age < 35
+ORDER BY age;
+```
+
+The order will be ascending by default. To revert the order add the ```DESC``` keyword at the end 
+of the ```ORDER BY``` statement, like so: 
+```sql
+SELECT * FROM PEOPLE
+WHERE age < 35
+ORDER BY age DESC;
+```
+
+
+SELECT * FROM PEOPLE
+WHERE age < 35
+ORDER BY Last_name, first_name;
+
+### Update
+```sql
+UPDATE people
+SET age=37
+WHERE first_name = 'Joakim'
+```
+
+### DELETE
+```sql
+DELETE FROM people
+WHERE first_name = 'Joakim'
+```
+
+
